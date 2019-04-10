@@ -4,7 +4,9 @@ const moment = require('moment-timezone');
 moment().format();
 const weather = require('./WeatherApi');
 
+
 class InfoInput extends React.Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -12,6 +14,7 @@ class InfoInput extends React.Component {
       lat: "",
       long: "",
       weather: "",
+      displayName: ""
     }
   }
 
@@ -37,37 +40,35 @@ class InfoInput extends React.Component {
     })
   }
 
-  onLA = () => {
-    this.setState({
-      location: "America/Los_Angeles",
-      lat: "34.05",
-      long: "-118.24"
-    }, () => {
-      this.grabWeather()
-    })
-  }
-
-  onKR = () => {
-    this.setState({
-      location: "Asia/Seoul",
-      lat: "37.34",
-      long: "126.59"
-    }, () => {
-      this.grabWeather()
-    })
-  }
-
   render() {
+    if (this.props.data) {
+      var lButtons = this.props.data.location.map((item, index) => {
+        return <button key={index}
+          style={{ backgroundColor: item.button }}
+          onClick={() => this.setState({
+            location: item.name,
+            lat: item.lat,
+            long: item.long,
+            displayName: item.displayName
+          }, () => {
+            this.grabWeather()
+          })}
+          value={item.lat}
+        >{item.displayName}
+        </button>
+      }
+      )
+    }
     if (this.state.location === "") {
       let current = moment().tz("America/Los_Angeles").format("MMMM Do YYYY, h: mm: ss a");
       return (
         <React.Fragment>
           <div>
-            <h1>Location: America/Los_Angeles</h1>
+            <h1>Location: Los Angeles, CA, USA</h1>
             <h2>{current}</h2>
           </div>
-          <button onClick={this.onLA}>Los Angeles</button>
-          <button onClick={this.onKR}>Seoul</button>
+
+          {lButtons}
         </React.Fragment>
       )
     } else {
@@ -75,17 +76,15 @@ class InfoInput extends React.Component {
       return (
         <React.Fragment>
           <div>
-            <h1>Location: {this.state.location}</h1>
+            <h1>Location: {this.state.displayName}</h1>
             <h2>{current}</h2>
             <h2>{this.state.weather}</h2>
           </div>
-          <button onClick={this.onLA}>Los Angeles</button>
-          <button onClick={this.onKR}>Seoul</button>
+          {lButtons}
         </React.Fragment>
       )
     }
   };
 }
-
 
 export default InfoInput;

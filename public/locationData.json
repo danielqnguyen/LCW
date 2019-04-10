@@ -1,0 +1,55 @@
+{
+  "main": {
+    "location": [
+      {
+        "name": "America/Los_Angeles",
+        "displayName": "Los Angeles, CA, USA",
+        "lat": "34.05",
+        "long": "-118.24",
+        "button": "#008CBA"
+      },
+      {
+        "name": "Asia/Seoul",
+        "displayName": "Seoul, Korea",
+        "lat": "37.34",
+        "long": "126.59",
+        "button": "#008CBA"
+      },
+      {
+        "name": "America/Los_Angeles",
+        "displayName": "Los Angeles, CA, USA",
+        "lat": "34.05",
+        "long": "-118.24",
+        "button": "#008CBA"
+      },
+      {
+        "name": "America/Los_Angeles",
+        "displayName": "Los Angeles, CA, USA",
+        "lat": "34.05",
+        "long": "-118.24",
+        "button": "#008CBA"
+      },
+      {
+        "name": "America/Los_Angeles",
+        "displayName": "Los Angeles, CA, USA",
+        "lat": "34.05",
+        "long": "-118.24",
+        "button": "#008CBA"
+      },
+      {
+        "name": "America/Los_Angeles",
+        "displayName": "Los Angeles, CA, USA",
+        "lat": "34.05",
+        "long": "-118.24",
+        "button": "#008CBA"
+      },
+      {
+        "name": "America/Los_Angeles",
+        "displayName": "Los Angeles, CA, USA",
+        "lat": "34.05",
+        "long": "-118.24",
+        "button": "#008CBA"
+      }
+    ]
+  }
+}
