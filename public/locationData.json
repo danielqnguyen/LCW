@@ -9,46 +9,109 @@
         "button": "#008CBA"
       },
       {
+        "name": "America/New_York",
+        "displayName": "New York, NY, USA",
+        "lat": "40.71",
+        "long": "74.01",
+        "button": "#FFD700"
+      },
+      {
+        "name": "America/Toronto",
+        "displayName": "Toronto, Canada",
+        "lat": "19.43",
+        "long": "99.13",
+        "button": "#FFFFFF"
+      },
+      {
+        "name": "America/Mexico_City",
+        "displayName": "Mexico City, Mexico",
+        "lat": "19.43",
+        "long": "99.13",
+        "button": "#008000"
+      },
+      {
         "name": "Asia/Seoul",
         "displayName": "Seoul, Korea",
-        "lat": "37.34",
-        "long": "126.59",
-        "button": "#008CBA"
+        "lat": "37.57",
+        "long": "126.98",
+        "button": "#ccac00"
       },
       {
-        "name": "America/Los_Angeles",
-        "displayName": "Los Angeles, CA, USA",
-        "lat": "34.05",
-        "long": "-118.24",
-        "button": "#008CBA"
+        "name": "Asia/Makassar",
+        "displayName": "Bali, Indonesia",
+        "lat": "-5.15",
+        "long": "119.43",
+        "button": "#FF0000"
       },
       {
-        "name": "America/Los_Angeles",
-        "displayName": "Los Angeles, CA, USA",
-        "lat": "34.05",
-        "long": "-118.24",
-        "button": "#008CBA"
+        "name": "Asia/Tokyo",
+        "displayName": "Tokyo, Japan",
+        "lat": "35.68",
+        "long": "139.65",
+        "button": "#FF0000"
       },
       {
-        "name": "America/Los_Angeles",
-        "displayName": "Los Angeles, CA, USA",
-        "lat": "34.05",
-        "long": "-118.24",
-        "button": "#008CBA"
+        "name": "Asia/Shanghai",
+        "displayName": "Shanghai, China",
+        "lat": "31.23",
+        "long": "121.47",
+        "button": "#FFD700"
       },
       {
-        "name": "America/Los_Angeles",
-        "displayName": "Los Angeles, CA, USA",
-        "lat": "34.05",
-        "long": "-118.24",
-        "button": "#008CBA"
+        "name": "Asia/Kuala_Lumpur",
+        "displayName": "Kuala Lumpur, Malaysia",
+        "lat": "3.14",
+        "long": "101.69",
+        "button": "#FFFFFF"
       },
       {
-        "name": "America/Los_Angeles",
-        "displayName": "Los Angeles, CA, USA",
-        "lat": "34.05",
-        "long": "-118.24",
-        "button": "#008CBA"
+        "name": "Asia/Ho_Chi_Minh",
+        "displayName": "Ho Chi Minh City, Vietnam",
+        "lat": "10.82",
+        "long": "106.63",
+        "button": "#FFD700"
+      },
+      {
+        "name": "Asia/Singapore",
+        "displayName": "Singapore, Singapore",
+        "lat": "1.35",
+        "long": "103.82",
+        "button": "#FFFFFF"
+      },
+      {
+        "name": "Asia/Bangkok",
+        "displayName": "Bangkok, Thailand",
+        "lat": "13.76",
+        "long": "100.50",
+        "button": "#006600"
+      },
+      {
+        "name": "Europe/Moscow",
+        "displayName": "Moscow, Russia",
+        "lat": "55.76",
+        "long": "37.62",
+        "button": "#FFFFFF"
+      },
+      {
+        "name": "Australia/Melbourne",
+        "displayName": "Melbourne, Australia",
+        "lat": "-37.81",
+        "long": "144.96",
+        "button": "#FF0000"
+      },
+      {
+        "name": "Pacific/Auckland",
+        "displayName": "Auckland, New Zealand",
+        "lat": "-36.84",
+        "long": "174.76",
+        "button": "#B20000"
+      },
+      {
+        "name": "Antarctica/Troll",
+        "displayName": "Research Station(Troll), Antarctica",
+        "lat": "-72.00",
+        "long": "2.32",
+        "button": "#FFFFFF"
       }
     ]
   }

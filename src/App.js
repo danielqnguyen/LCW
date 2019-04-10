@@ -34,10 +34,8 @@ class App extends Component {
 
   render() {
     return (
-
       <div className="App">
         <Location data={this.state.locationData.main} />
-        <button onClick={() => console.log(this.state)}>Hi</button>
       </div>
     );
   }

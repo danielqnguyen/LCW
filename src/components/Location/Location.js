@@ -6,7 +6,6 @@ const weather = require('./WeatherApi');
 
 
 class InfoInput extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = {
@@ -16,16 +15,6 @@ class InfoInput extends React.Component {
       weather: "",
       displayName: ""
     }
-  }
-
-  onChange = evt => {
-    const key = evt.target.name;
-    const val = evt.target.value;
-    this.setState({ [key]: val }, console.log(key, val));
-  }
-
-  onClick = () => {
-    console.log(this.state)
   }
 
   grabWeather = () => {
@@ -67,7 +56,6 @@ class InfoInput extends React.Component {
             <h1>Location: Los Angeles, CA, USA</h1>
             <h2>{current}</h2>
           </div>
-
           {lButtons}
         </React.Fragment>
       )

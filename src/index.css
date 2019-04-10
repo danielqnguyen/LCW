@@ -6,3 +6,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 12.5px;
+}
