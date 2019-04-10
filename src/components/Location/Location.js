@@ -17,7 +17,6 @@ class InfoInput extends React.Component {
 
   grabWeather = () => darkSkypApi.getWeather(this.state.lat, this.state.long, resp => {this.setState({ weather: resp.data.currently.temperature })}, error => {console.log(error)})
 
-  
   render() {
     if (this.props.data) {
       var lButtons = this.props.data.location.map((item, index) => {
@@ -41,8 +40,9 @@ class InfoInput extends React.Component {
       return (
         <>
           <div>
-            <h1>Location: Los Angeles, CA, USA</h1>
-            <h2>{current}</h2>
+            <h1>Hello and welcome to my time and weather app</h1>
+            <h2>Currently in Los Angeles, CA it is {current}</h2>
+            <h3>To check other timezones and their weather click a button</h3>
           </div>
           {lButtons}
         </>
@@ -55,6 +55,7 @@ class InfoInput extends React.Component {
             <h1>Location: {this.state.displayName}</h1>
             <h2>{current}</h2>
             <h2>{this.state.weather}</h2>
+            <button className="convert">F/C</button>
           </div>
           {lButtons}
         </>
