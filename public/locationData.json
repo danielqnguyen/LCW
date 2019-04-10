@@ -18,8 +18,8 @@
       {
         "name": "America/Toronto",
         "displayName": "Toronto, Canada",
-        "lat": "19.43",
-        "long": "99.13",
+        "lat": "43.65",
+        "long": "79.38",
         "button": "#FFFFFF"
       },
       {
@@ -35,13 +35,6 @@
         "lat": "37.57",
         "long": "126.98",
         "button": "#ccac00"
-      },
-      {
-        "name": "Asia/Makassar",
-        "displayName": "Bali, Indonesia",
-        "lat": "-5.15",
-        "long": "119.43",
-        "button": "#FF0000"
       },
       {
         "name": "Asia/Tokyo",
@@ -63,6 +56,13 @@
         "lat": "3.14",
         "long": "101.69",
         "button": "#FFFFFF"
+      },
+      {
+        "name": "Asia/Makassar",
+        "displayName": "Bali, Indonesia",
+        "lat": "-5.15",
+        "long": "119.43",
+        "button": "#FF0000"
       },
       {
         "name": "Asia/Ho_Chi_Minh",

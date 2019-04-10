@@ -1,9 +1,7 @@
 import React from 'react';
-// var moment = require('moment');
+import darkSkypApi from './WeatherApi'
 const moment = require('moment-timezone');
 moment().format();
-const weather = require('./WeatherApi');
-
 
 class InfoInput extends React.Component {
   constructor(props) {
@@ -14,21 +12,12 @@ class InfoInput extends React.Component {
       long: "",
       weather: "",
       displayName: ""
-    }
+    };
   }
 
-  grabWeather = () => {
-    weather.getWeather(this.state.lat, this.state.long, (errorMessage, weatherResults) => {
-      if (errorMessage) {
-        console.log(errorMessage);
-      } else {
-        this.setState({
-          weather: weatherResults.temp
-        })
-      }
-    })
-  }
+  grabWeather = () => darkSkypApi.getWeather(this.state.lat, this.state.long, resp => {this.setState({ weather: resp.data.currently.temperature })}, error => {console.log(error)})
 
+  
   render() {
     if (this.props.data) {
       var lButtons = this.props.data.location.map((item, index) => {
@@ -45,31 +34,30 @@ class InfoInput extends React.Component {
           value={item.lat}
         >{item.displayName}
         </button>
-      }
-      )
+      })
     }
     if (this.state.location === "") {
-      let current = moment().tz("America/Los_Angeles").format("MMMM Do YYYY, h: mm: ss a");
+      let current = moment().tz("America/Los_Angeles").format("MMMM Do YYYY, h:mm a");
       return (
-        <React.Fragment>
+        <>
           <div>
             <h1>Location: Los Angeles, CA, USA</h1>
             <h2>{current}</h2>
           </div>
           {lButtons}
-        </React.Fragment>
+        </>
       )
     } else {
-      let current = moment().tz(this.state.location).format("MMMM Do YYYY, h: mm: ss a");
+      let current = moment().tz(this.state.location).format("MMMM Do YYYY, h:mm a");
       return (
-        <React.Fragment>
+        <>
           <div>
             <h1>Location: {this.state.displayName}</h1>
             <h2>{current}</h2>
             <h2>{this.state.weather}</h2>
           </div>
           {lButtons}
-        </React.Fragment>
+        </>
       )
     }
   };

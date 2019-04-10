@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import $ from 'jquery';
-import Location from './components/Location/Location'
+import Location from './components/Location/Location';
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +18,6 @@ class App extends Component {
       dataType: 'json',
       cache: false,
       success: function (data) {
-        // console.log(data)
         this.setState({ locationData: data });
       }.bind(this),
       error: function (xhr, status, err) {
@@ -38,7 +37,7 @@ class App extends Component {
         <Location data={this.state.locationData.main} />
       </div>
     );
-  }
+  };
 }
 
 export default App;
