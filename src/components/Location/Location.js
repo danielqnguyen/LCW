@@ -15,7 +15,9 @@ class InfoInput extends React.Component {
     };
   }
 
-  grabWeather = () => darkSkypApi.getWeather(this.state.lat, this.state.long, resp => {this.setState({ weather: resp.data.currently.temperature })}, error => {console.log(error)})
+  grabWeather = () => darkSkypApi.getWeather(this.state.lat, this.state.long, resp => { this.setState({ weather: resp.data.currently.temperature }, console.log(resp)) }, error => { console.log(error) })
+
+  convertTemp = far => this.setState({ weather: (far - 32) / 1.8 })
 
   render() {
     if (this.props.data) {
@@ -39,7 +41,7 @@ class InfoInput extends React.Component {
       let current = moment().tz("America/Los_Angeles").format("MMMM Do YYYY, h:mm a");
       return (
         <>
-          <div>
+          <div className="info">
             <h1>Hello and welcome to my time and weather app</h1>
             <h2>Currently in Los Angeles, CA it is {current}</h2>
             <h3>To check other timezones and their weather click a button</h3>
@@ -49,13 +51,14 @@ class InfoInput extends React.Component {
       )
     } else {
       let current = moment().tz(this.state.location).format("MMMM Do YYYY, h:mm a");
+
       return (
         <>
-          <div>
+          <div className="info">
             <h1>Location: {this.state.displayName}</h1>
             <h2>{current}</h2>
             <h2>{this.state.weather}</h2>
-            <button className="convert">F/C</button>
+            <button onClick={() => this.convertTemp(this.state.weather)} className="convert">F/C</button>
           </div>
           {lButtons}
         </>
